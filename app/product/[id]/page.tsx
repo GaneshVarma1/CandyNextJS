@@ -51,7 +51,10 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                 className="object-cover w-full h-full"
               />
             </div>
-            <Badge variant="secondary" className="absolute top-4 right-4 bg-white/90">
+            <Badge
+              variant="secondary"
+              className="absolute top-4 right-4 bg-white/90"
+            >
               <Star className="h-4 w-4 text-yellow-400 fill-current mr-1" />
               {product.rating}
             </Badge>
@@ -82,7 +85,9 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                   >
                     -
                   </Button>
-                  <span className="font-semibold text-xl">{cartItem.quantity}</span>
+                  <span className="font-semibold text-xl">
+                    {cartItem.quantity}
+                  </span>
                   <Button
                     onClick={() => addItem({ ...product, quantity: 1 })}
                     variant="outline"
@@ -105,7 +110,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
 
         {/* Related Products */}
         <section className="mt-24">
-          <h2 className="text-3xl font-bold mb-8">Related Products</h2>
+          <h2 className="text-3xl font-bold mb-8">Kids Also like</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {relatedProducts.map((candy) => (
               <ProductCard key={candy.id} product={candy} />
