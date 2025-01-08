@@ -45,12 +45,12 @@ export default function Home() {
       <main className="relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
           <motion.h1
-            className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 flex items-center justify-center"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 flex flex-wrap items-center justify-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Best{" "}
+            <span>Best</span>
             <motion.span
               className="ml-2"
               animate={{
@@ -63,13 +63,13 @@ export default function Home() {
               }}
             >
               🍭
-            </motion.span>{" "}
-            Candy Store in the World!
+            </motion.span>
+            <span className="ml-2">Candy Store in the World!</span>
           </motion.h1>
 
           {/* Paragraph with Animated Underline */}
           <motion.p
-            className="text-xl text-gray-600 mb-8 relative inline-block"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mb-8 relative inline-block max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -95,7 +95,7 @@ export default function Home() {
               >
                 <path d="M0 15 Q150 0 300 15" stroke="#ec4899" />
               </motion.svg>
-            </span>{" "}
+            </span>
             ✨ enchanting world of sweets & treats 🍬🍫—where every bite is pure
             magic! 🌟
           </motion.p>
