@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const images = [
   "https://plus.unsplash.com/premium_photo-1675283825474-390ea83c0703?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Chocolate truffles
@@ -25,10 +26,12 @@ const images = [
 ];
 const ImageComponent = ({ src, alt }: { src: string; alt: string }) => (
   <motion.div className="flex-shrink-0 px-2 transition-all duration-300">
-    <img
+    <Image
       src={src}
       alt={alt}
-      className="w-[400px] h-[250px] rounded-xl object-cover"
+      width={400}
+      height={250}
+      className="rounded-xl object-cover"
     />
   </motion.div>
 );
